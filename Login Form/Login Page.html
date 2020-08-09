@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title>Login Page</title>
+		<link rel="stylesheet" href="Login Page.css">
+		<meta name = "Author" content = "Documentation" />
+		<meta name = "Keywords" content = "Login Page" />
+		<meta name = "Description" content = "This is HTML Tables" />
+		<script src="jquery-3.4.1.min.js"> </script>
+
+	</head>
+	
+	<body>
+		
+		<form class="login-form">
+			<h1>Login</h1>
+			
+			<div class="txtb">
+				<input type="text">
+				<span data-placeholder="Username"></span>
+			</div>
+			
+			<div class="txtb">
+				<input type="text">
+				<span data-placeholder="Password"></span>
+			</div>
+			
+			<input type="submit" class="loginbtn" value="Login">
+			
+			<div class="bottom-text">
+				Don't have account? <a href="#">Sign up</a>			
+			</div>
+			
+		</form>
+		
+		<script type="text/javascript">
+			$(".txtb input").on("focus",function(){
+				$(this).addClass("focus");
+			});
+			
+			$(".txtb input").on("blur",function(){
+				if($(this).val() == "")
+				$(this).removeClass("focus");
+			});
+		</script>
+		
+	</body>
+	
+</html>
